@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ひめキュンフルーツ缶2013春ツアーお疲れ様 ライブ感想メッセージカード企画</title>
+    <link rel='stylesheet' href='/bootstrap/css/bootstrap.css' />
+    <link rel='stylesheet' href='/bootstrap/css/bootstrap-responsive.css' />
+    <link rel="stylesheet/less" href="/less/styles.less" />
+    <meta name="viewport" content="width=device-width">
+    <script src="/javascripts/less-1.3.0.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="index-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="well span12" id="title-section">
+            <div class="row-fluid">
+              <div class="span10">
+                <h1>ひめキュンフルーツ缶2013春ツアーお疲れ様企画</h1>
+                <h2>ライブ感想メッセージカード企画 <strong>web版</strong></h2>
+              </div>
+              <div class="span2">
+                <img id="qrimage" src="/images/QRcode.gif" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <% if (error_message) { %>
+        <div class="row">
+          <div class="span12">
+            <div class="alert alert-error">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <%= error_message %>
+            </div>
+        </div></div>
+        <% } %>
+        
+        <div class="row">
+          <div class="span12">
+        <form id="message-form" class="message-form" action="/preview" method="post">
+          <div class="row-fluid">
+            <div class="span4">
+              <select name="location" id="location">
+                <option value="none">会場を選択してください</option>
+                <option value="01hiroshima" <% if (location == "01hiroshima") {%> selected <% } %>>広島 BACK BEAT</option>
+                <option value="02kochi" <% if (location == "02kochi") {%> selected <% } %>>高知 X-pt.</option>
+                <option value="03takamatsu" <% if (location == "03komatsu") {%> selected <% } %>>高松 MONSTER</option>
+                <option value="04yokohama" <% if (location == "04yokohama") {%> selected <% } %>>横浜 BAYSIS</option>
+                <option value="06koriyama" <% if (location == "05koriyama") {%> selected <% } %>>郡山 CLUB#9</option>
+                <option value="05nigata" <% if (location == "05nigata") {%> selected <% } %>>新潟 CLUB RIVERST</option>
+                <option value="07sendai" <% if (location == "07sendai") {%> selected <% } %>>仙台 darwin</option>
+                <option value="08matsuyama" <% if (location == "08matsuyama") {%> selected <% } %>>松山 サロンキティ<!-- 大好きだ、愛してる --> </option> 
+                <option value="09okayama" <% if (location == "09okayama") {%> selected <% } %>>岡山 CRAZYMAMA</option>
+                <option value="10nagoya" <% if (location == "10nagoya") {%> selected <% } %>>名古屋 ell. FITS ALL</option>
+                <option value="11tokyo" <% if (location == "11tokyo") {%> selected <% } %>>原宿 アストロホール</option>
+                <option value="12hyogo" <% if (location == "12hyogo") {%> selected <% } %>>神戸 太陽と虎</option>
+                <option value="13fukuoka" <% if (location == "13fukuoka") {%> selected <% } %>>福岡 BEAT STATION</option>
+                <option value="14osaka" <% if (location == "14osaka") {%> selected <% } %>>梅田 Shangri-La</option>
+              </select>
+            </div>
+            <div class="span8">
+              <div class="row-fluid">
+                <label for="name" class="span4">お名前(ハンドルネーム可)</label>
+                <input class="span8" type="text" id="name" name="name" value="<%- name %>"/>
+              </div>
+              <div class="row-fluid">
+                <label class="span4" for="message">メッセージ</label>
+                <textarea class="span8" name="message" id="message"><%- message %></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row-fluid">
+            <input id="submit" type="submit" class="btn btn-primary span12" value="プレビュー" />
+          </div>
+        </form></div></div>
+
+        <div class="row">
+          <div class="span12">
+            <div class="description" id="vision">
+              <h3>趣旨</h3>
+              <p>
+                ひめキュンフルーツ缶2013春ツアーScene of the youth!!は広島に始まり梅田まで全国14箇所の
+                ライブハウスで行われます。
+              </p>
+              <p>
+                たくさんの場所を巡るこのツアーのラスト梅田Shangri-Laにて、各会場でライブに参加したファンから、
+                その会場ごとの感想をメッセージカードとしてメンバーにプレゼントしようという企画です。
+              </p>
+              <p>
+                各会場にて、本企画メンバーがメッセージカードを配布しておりますが、そこでメッセージを書き損ねてしまった
+                方々がメッセージカードを残すためのwebページがこのサイトになります。
+              </p>
+              <p>
+                本webページから登録していただいたメッセージは、本企画メンバーがメッセージカードに印刷をし、
+                梅田Shangri-Laにてメンバーに贈呈いたします。
+              </p>
+              <p>
+                ご協力よろしくおねがいいたします。
+              </p>
+              <p class="note">
+                この企画はファンの有志で行なっています。
+                企画グループは以下のグルっぽになります。
+                <a target="_blank" href="http://group.ameba.jp/group/k3W6a5atBi2q/">ひめキュン2013春ツアーファイナル企画</a>
+              </p>
+            </div>
+            <div class="description" id="howto">
+              <h3>使い方</h3>
+              <ol>
+                <li>参加した会場を会場リストから選択</li>
+                <li>名前とメッセージを記載</li>
+                <li>「プレビュー」ボタンから印刷時のイメージを確認</li>
+                <li>問題なければ、「投稿」ボタンからメッセージを投稿</li>
+                <li>以上!!</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="footer span12">
+            <p>管理者 <a target="_blank" href="http://twitter.com/himetour_final">@himetour_final</a></p>
+            <p class="comment">（・　　ω　　・）何か問題があったら教えてね!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/bootstrap/js/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+  </body>
+</html>

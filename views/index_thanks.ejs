@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>【ありがとう】 ひめキュンフルーツ缶2013春ツアーお疲れ様 ライブ感想メッセージカード企画</title>
+    <link rel='stylesheet' href='/bootstrap/css/bootstrap.css' />
+    <link rel='stylesheet' href='/bootstrap/css/bootstrap-responsive.css' />
+    <link rel="stylesheet/less" href="/less/styles.less" />
+    <meta name="viewport" content="width=device-width">
+    <script src="/javascripts/less-1.3.0.min.js" type="text/javascript"></script>
+    <!-- ひめキュン大好きだよ、愛してる -->
+  </head>
+  <body>
+    <div id="index-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="well span12" id="title-section">
+            <h1>ひめキュンフルーツ缶2013春ツアーお疲れ様企画</h1>
+            <h2>ご協力ありがとうございました!</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span12">
+            <img src="/images/album.jpg" />
+          </div>
+        </div>
+        <div class="row" id="setlist-section">
+          <div class="span12">
+            <% var albums = ["01hiroshima.jpg", "02kochi.jpg", "03takamatsu.jpg", "04yokohama.jpg",
+                             "05koriyama.jpg", "06niigata.jpg", "07sendai.jpg", "08matsuyama.jpg",
+                             "09okayama.jpg", "10nagoya.jpg", "11harajuku.jpg", "12kobe.jpg",
+                             "13fukuoka.jpg", "14umeda1.jpg"]; %>
+            <% for (var i = 0; i < albums.length / 2; i++) { %>
+               <div class="row-fluid">
+                <div class="span6">
+                  <img src="/images/album/<%= albums[i * 2] %>_light.jpg" />
+                 </div>
+                 <div class="span6">
+                  <img src="/images/album/<%= albums[i * 2 + 1] %>_light.jpg" />
+                 </div>
+               </div>
+            <% } %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="footer span12">
+            <p>管理者 <a target="_blank" href="http://twitter.com/himetour_final">@himetour_final</a></p>
+            <p class="comment">（・　　ω　　・）何か問題があったら教えてね!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

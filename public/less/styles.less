@@ -1,0 +1,111 @@
+@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+
+
+body {
+    background-color: white;
+}
+
+#index-wrapper {
+    margin-top: 40px;
+    #setlist-section {
+        margin-top: 20px;
+        p.encore {
+            padding: 0;
+            margin: 0;
+            margin-top: 10px;
+        }
+        li.livehouse {
+            margin-top: 10px;
+        }
+    }
+    #title-section {
+        h2 {
+            strong {
+                color: red;
+            }
+        }
+    }
+    #howto {
+        margin-top: 40px;
+    }
+    .description {
+        .note {
+            font-size: 12px;
+            color: #888;
+        }
+    }
+    .footer {
+        padding-top: 60px;
+        padding-bottom: 20px;
+        p {
+            text-align: right;
+            &.comment {
+                color: #888;
+            }
+        }
+    }
+    .message-form {
+        padding-top: 20px;
+    }
+}
+
+#preview-wrapper {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    #message-card {
+        width: 280px;
+        height: 169.19925512104282px;
+        background-size: 280px 169.19925512104282px;
+        position: relative;
+        #name {
+            position: absolute;
+            left: 197px;
+            top: 124px;
+            width: 60px;
+            text-shadow: 0px 1px 0px rgba(255.0, 255.0, 255.0, 0.5);
+            text-align: center;
+            font-weight: bold;
+            font-size: 12px;
+            font-family: @sansFontFamily;
+        }
+        #message {
+            font-family: @sansFontFamily;
+            padding: 0;
+            margin: 0;
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: normal;
+            text-shadow: 0px 1px 0px rgba(255.0, 255.0, 255.0, 0.5);
+            width: 230px;
+            left: 25px;
+            position: absolute;
+            top: 50px;
+            border: none;
+            background-color: transparent;
+        }
+    }
+    #submit-form {
+        input[type="submit"] {
+            margin-top: 40px;
+            height: 50px;
+            font-size: 24px;
+            width: 100%;
+        }
+    }
+}
+
+#thanks-wrapper {
+    margin-top: 40px;
+}
+
+.message-form {
+    textarea#message {
+        height: 100px;
+    }
+    #submit.btn {
+        margin-top: 20px;
+        height: 40px;
+    }
+}
