@@ -18,7 +18,7 @@ if (process.env.MONGOLAB_URI) {
     db_name = process.env.MONGOLAB_URI;
 }
 else {
-    db_name = 'mongodb://localhost/hkfc-message-card';
+    db_name = 'mongodb://localhost/hkfc-message-card-2013-2014';
 }
 
 mongoose.connect(db_name);
@@ -47,7 +47,7 @@ app.configure('development', function(){
 });
 
 app.all("/admin/*", express.basicAuth(function(user, pass) {
-    return user == "hkfc" && pass == "madmagazine";
+    return user == process.env.HKFC_MESSAGE_CARD_USER && pass == process.env.HKFC_MESSAGE_CARD_PASSWD;
 }));
 
 routes.routes.forEach(function(r) {
