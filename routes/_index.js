@@ -19,8 +19,14 @@ exports.get = function(req, res, next) {
     case "noname":
       error_message = "名前が指定されていません";
       break;
-    case "nomessage":
-      error_message = "メッセージが指定されていません";
+    case "nomessage1":
+      error_message = "1番目のメッセージが指定されていません";
+      break;
+    case "nomessage2":
+      error_message = "2番目のメッセージが指定されていません";
+      break;
+    case "nomessage3":
+      error_message = "3番目のメッセージが指定されていません";
       break;
     }
     var location = req.flash("location");
