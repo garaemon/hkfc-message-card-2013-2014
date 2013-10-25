@@ -14,9 +14,19 @@
       <ul>
       <% for (var i = 0; i < messages.length; i++) { %>
          <li>
-           <p class="name"><%= messages[i].name %> </p>
-           <p class="location"><%= messages[i].location %> </p>
-           <pre class="message"><%= messages[i].message %> </pre>
+           <p class="name">なまえ: <%= messages[i].name %> </p>
+           <p class="location">場所: <%= messages[i].location %> </p>
+           <ol>
+             <li>
+               <pre class="message1"><%= messages[i].message1 %> </pre>
+             </li>
+             <li>
+               <pre class="message2"><%= messages[i].message2 %> </pre>
+             </li>
+             <li>
+               <pre class="message3"><%= messages[i].message3 %> </pre>
+             </li>
+           </ul>
          </li>
       <% } %>
       </ul>
