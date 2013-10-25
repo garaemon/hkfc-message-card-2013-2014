@@ -23,7 +23,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> <!-- .row -->
         <% if (error_message) { %>
         <div class="row">
           <div class="span12">
@@ -31,9 +31,9 @@
               <button type="button" class="close" data-dismiss="alert">&times;</button>
               <%= error_message %>
             </div>
-        </div></div>
+          </div>
+        </div> <!-- .row -->
         <% } %>
-        
         <div class="row">
           <div class="span12">
             <form id="message-form" class="message-form" action="/preview" method="post">
@@ -63,64 +63,63 @@
                 <label class="span4" for="message3">ライブの間奏やメンバーへのメッセージをお願いします</label>
                 <textarea class="span8" name="message3" id="message3"><%- message3 %></textarea>
               </div>
+              <div class="row-fluid">
+                <input id="submit" type="submit" class="btn btn-primary span12" value="プレビュー" />
+              </div>
+            </form>
           </div>
         </div>
-        <div class="row-fluid">
-          <input id="submit" type="submit" class="btn btn-primary span12" value="プレビュー" />
+        <div class="row">
+          <div class="span12">
+            <div class="description" id="vision">
+              <h3>趣旨</h3>
+              <p>
+                ひめキュンフルーツ缶2013-2014冬ツアーYour Future Is Our Hope!!は広島に始まり梅田まで全国14箇所の
+                ライブハウスで行われます。
+              </p>
+              <p>
+                たくさんの場所を巡るこのツアーのラスト松山サロンキティにて、各会場でライブに参加したファンから、
+                その会場ごとの感想をメッセージカードとしてメンバーにプレゼントしようという企画です。
+              </p>
+              <p>
+                各会場にて、本企画メンバーがメッセージカードを配布しておりますが、そこでメッセージを書き損ねてしまった
+                方々がメッセージカードを残すためのwebページがこのサイトになります。
+              </p>
+              <p>
+                本webページから登録していただいたメッセージは、本企画メンバーがメッセージカードに印刷をし、
+                松山サロンキティにてメンバーに贈呈いたします。
+              </p>
+              <p>
+                ご協力よろしくおねがいいたします。
+              </p>
+              <p class="note">
+                この企画はファンの有志で行なっています。
+                企画グループは以下のグルっぽになります。
+                <a target="_blank" href="http://group.ameba.jp/group/iwx1kMWYcEZe/">ひめキュンツアー企画 2013-2014</a>
+              </p>
+            </div>
+            <div class="description" id="howto">
+              <h3>使い方</h3>
+              <ol>
+                <li>参加した会場を会場リストから選択</li>
+                <li>名前とメッセージを記載</li>
+                <li>「プレビュー」ボタンから印刷時のイメージを確認</li>
+                <li>問題なければ、「投稿」ボタンからメッセージを投稿</li>
+                <li>以上!!</li>
+              </ol>
+            </div>
+          </div>
         </div>
-    </form></div></div>
-
-    <div class="row">
-      <div class="span12">
-        <div class="description" id="vision">
-          <h3>趣旨</h3>
-          <p>
-            ひめキュンフルーツ缶2013-2014冬ツアーYour Future Is Our Hope!!は広島に始まり梅田まで全国14箇所の
-            ライブハウスで行われます。
-          </p>
-          <p>
-            たくさんの場所を巡るこのツアーのラスト松山サロンキティにて、各会場でライブに参加したファンから、
-            その会場ごとの感想をメッセージカードとしてメンバーにプレゼントしようという企画です。
-          </p>
-          <p>
-            各会場にて、本企画メンバーがメッセージカードを配布しておりますが、そこでメッセージを書き損ねてしまった
-            方々がメッセージカードを残すためのwebページがこのサイトになります。
-          </p>
-          <p>
-            本webページから登録していただいたメッセージは、本企画メンバーがメッセージカードに印刷をし、
-            松山サロンキティにてメンバーに贈呈いたします。
-          </p>
-          <p>
-            ご協力よろしくおねがいいたします。
-          </p>
-          <p class="note">
-            この企画はファンの有志で行なっています。
-            企画グループは以下のグルっぽになります。
-            <a target="_blank" href="http://group.ameba.jp/group/iwx1kMWYcEZe/">ひめキュンツアー企画 2013-2014</a>
-          </p>
-        </div>
-        <div class="description" id="howto">
-          <h3>使い方</h3>
-          <ol>
-            <li>参加した会場を会場リストから選択</li>
-            <li>名前とメッセージを記載</li>
-            <li>「プレビュー」ボタンから印刷時のイメージを確認</li>
-            <li>問題なければ、「投稿」ボタンからメッセージを投稿</li>
-            <li>以上!!</li>
-          </ol>
+        
+        <div class="row">
+          <div class="footer span12">
+            <p>管理者 <a target="_blank" href="http://twitter.com/himetour_final">@himetour_final</a></p>
+            <p class="comment">（・　　ω　　・）何か問題があったら教えてね!</p>
+          </div>
         </div>
       </div>
     </div>
-    
-    <div class="row">
-      <div class="footer span12">
-        <p>管理者 <a target="_blank" href="http://twitter.com/himetour_final">@himetour_final</a></p>
-        <p class="comment">（・　　ω　　・）何か問題があったら教えてね!</p>
-      </div>
-    </div>
-</div>
-</div>
-<script src="/bootstrap/js/jquery.js"></script>
-<script src="/bootstrap/js/bootstrap.js"></script>
-</body>
+    <script src="/bootstrap/js/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+  </body>
 </html>
